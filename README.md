@@ -37,17 +37,20 @@ To install Active Directory Services we need to log into DC-1, go to Server Mana
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img width="650" alt="organizational_unit" src="https://github.com/user-attachments/assets/14da59d7-30e4-404d-8ae9-8e721476f4ae">
+<img width="645" alt="new_user" src="https://github.com/user-attachments/assets/d511c139-1c26-4b4d-aa3b-c6d2bb6121a0">
+<img width="585" alt="user_to_admin" src="https://github.com/user-attachments/assets/9ddd02f3-9ef8-42ce-9662-7a6429e52194">
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+To create a Domain Admin user within the domain we need to go to Adminsitrative Tools and go into Active Directory Users and Computers. We will right click mydomainname.com go under New and click on Organizational Unit type in a name (_EMPLOYEES) and click ok. We can repeat the process to create more Organizational Units for example another could be _Admins. We can create a new employee by rigth clicking on one of the Organizational Units like _Admins and going to New and select User. A window will pop up that will ask to fill in their full name and userlogin name, click next and it will ask to create a paswword. If we want to make the user a proper admin we have to go to their name right click and click on properties. We will have to click on the Member of tab, click Add we can then search for the Domain Admins name. Once found click on Ok and then Apply and now they are an Admin User.
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img width="878" alt="computer:domain_name_change" src="https://github.com/user-attachments/assets/2aac82c6-e36b-4bcf-99c6-11605cd56239">
+<img width="417" alt="account_with_permission" src="https://github.com/user-attachments/assets/46adb5a7-8d7f-4bb7-bb18-524b1c1f0180">
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+To get Client-1 to join our domain (mydomain.com) we need to be in Client-1's VM and go into the system settings and go into the About. On the right side click on Rename this PC (advanced). System properties will open and under the Computer Name tab click on Change. Under member of check the circle Domain and type the domain name for example "mydomain.com" and click ok. It will ask for an account that has permission to join the domain, here we can use the admin user we created earlier "mydomain.com\jane_admin if successful it will do a restart.
 </p>
 <br />

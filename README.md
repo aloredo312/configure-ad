@@ -54,3 +54,20 @@ To create a Domain Admin user within the domain we need to go to Adminsitrative 
 To get Client-1 to join our domain (mydomain.com) we need to be in Client-1's VM and go into the system settings and go into the About. On the right side click on Rename this PC (advanced). System properties will open and under the Computer Name tab click on Change. Under member of check the circle Domain and type the domain name for example "mydomain.com" and click ok. It will ask for an account that has permission to join the domain, here we can use the admin user we created earlier "mydomain.com\jane_admin if successful it will do a restart.
 </p>
 <br />
+
+<p>
+<img width="836" alt="adding_domain_users" src="https://github.com/user-attachments/assets/158fc5c1-507f-4607-99e9-cb0a5cd4d381">
+</p>
+<p>
+Next we're going to set up remote desktop for non-administrative users on client-1. We need to be logged into Client-1 as the admin user we created (mydomain.com\jane_admin). Then open system properties and click pn "Remote Desktop", then under User accounts click on "Select users that can remotely access this PC". On the new window pop up click add, then we can enter the object names to select, we will type "Domain Users" and click ok.
+</p>
+<br />
+
+<p>
+<img width="1246" alt="powershell" src="https://github.com/user-attachments/assets/2102b855-1f3b-4dca-b920-74ed5b7afc66">
+</p>
+<p>
+Now we're going to create a additional users and to do this we need to be in DC-1 as our admin user (jane_admin). We will open Powershell as an admin, right click and click on "run as administrator". We will create a new file and paste the contents of a script (this script has code that generates random user names). We will run the script and wait until for accounts to be created. When finished we can attempt to log into Client-1 with one of the account.
+</p>
+<br />
+
